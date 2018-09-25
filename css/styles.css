@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Courier New, Arial, sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: #DEDEDE;
+}
+
+#desktop {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1024px;
+  height: 560px;
+  background-color: #1B2B34;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#field {
+  position: absolute;
+  width: 100%;
+  height: 510px;
+}
+
+#sidebar__body {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #091922;
+  z-index: 1000;
+}
+
+#sidebar__window_add {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: url("../img/add.png");
+  background-position-x: 0;
+  cursor: pointer;
+}
+#sidebar__window_add:hover {
+  background-position-x: -60px;
+}
+
+#sidebar__window_panel {
+  display: inline-flex;
+  width: 974px;
+  height: 100%;
+  justify-content: flex-start;
+}
+#sidebar__window_panel :last-child {
+  /*margin-right: 0;*/
+}
+
+.sidebar__window {
+  overflow: hidden;
+  width: 50px;
+  margin-right: 1px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  background-color: #718B9A;
+  cursor: pointer;
+}
+.sidebar__window.selected {
+  background-color: #767A9C ;
+}
+.sidebar__window:hover {
+  background-color: #62869A;
+}
+
+.window__body {
+  display: block;
+  position: absolute !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  width: 300px;
+  height: 225px;
+  background-color: #A89379;
+  border: 1px solid #202239;
+}
+
+.window__caption {
+  display: flex;
+  width: 100%;
+  height: 15px;
+  justify-content: space-between;
+  background-color: #A89768;
+  border-bottom: 1px solid #202239;
+}
+
+.window__body.ontop .window__caption {
+  background-color: #696D9C  ;
+}
+
+.window__title {
+  padding-left: 10px;
+  line-height: 15px;
+  font-size: 12px;
+  flex-grow: 1;
+}
+
+.window__controls {
+  display: inline-flex;
+}
+
+.window__minify, .window__close {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.window__minify {
+  background-image: url("../img/minify.png");
+}
+.window__minify:hover {
+  background-color: #fdbf00;
+}
+
+.window__close {
+  background-image: url("../img/close.png");
+}
+.window__close:hover {
+  background-color: #ff4747;
+}
